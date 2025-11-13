@@ -35,15 +35,29 @@
 /************************* YOUR SETTINGS *************************/
 
 /* add your css here, feel free to use comments and order them logically for better readability */
+
+
+/* border is included in width en height of boxes */
+/* ...existing code... */
+
+/************************* YOUR SETTINGS *************************/
+
+/* add your css here, feel free to use comments and order them logically for better readability */
 :root {
-   --color-header: #
-   --color-nav;
-   --color-main;
-   --color-footer;
-   --bg:
-   --text:
-   --font-sans:
+   --color-header: #3E14FA;
+   --color-nav: #4E51FC;
+   --color-main: #c3dcf3;
+   --color-footer: #221fe2;
+   --bg: #FFFFFF;
+   --text: #000000;
+   --font-sans: Arial, sans-serif;
 }
+
+/* Reset en box-sizing */
+* { box-sizing: border-box; }
+* { margin: 0px; }
+
+/* Grid-layout op body toepassen */
 body {
    display: grid;
    grid-template-areas:
@@ -52,24 +66,63 @@ body {
       "footer footer";
    grid-template-columns: 1fr 3fr;
    grid-template-rows: 120px 1fr 60px;
+   min-height: 100vh;
+   background-color: var(--bg);
+   color: var(--text);
+   font-family: var(--font-sans);
 }
 
+/* Header, nav, main, footer styling */
 header {
    grid-area: header;
-   background-color: rgb(62, 20, 250);
+   background-color: var(--color-header);
+   color: white;
+   padding: 20px;
+   display: flex;
+   align-items: center;
 }
 
 nav {
    grid-area: nav;
-   background-color: rgb(78, 81, 252);
+   background-color: var(--color-nav);
+   color: white;
+   padding: 20px;
 }
 
+/* eenvoudig menu-stijl */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-bottom: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 8px;
+  display: inline-block;
+}
+
+/* main en footer */
 main {
    grid-area: main;
-
+   padding: 20px;
+   background-color: var(--color-main);
 }
 
 footer {
    grid-area: footer;
-
+   background-color: var(--color-footer);
+   color: white;
+   padding: 12px 20px;
 }
+
+/* ...existing code... */
+* { box-sizing: border-box; }
+
+/* standard margin 0 pixels */
+* { margin: 0px; }
