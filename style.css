@@ -113,7 +113,7 @@ nav a {
 /* main en footer */
 main {
    grid-area: main;
-   padding: 20px;
+   padding: 30px;
    background-color: var(--color-main);
 }
 
