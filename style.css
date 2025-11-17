@@ -151,17 +151,35 @@ footer {
 
 /* Two-column layout for images side-by-side */
 .two-column-images {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+   display: flex;
+   gap: 20px;
+   align-items: flex-start;
 }
 .two-column-images img {
-  flex: 1 1 50%;
-  height: calc(100vh - 240px);
-  width: auto;
-  object-fit: contain;
-  display: block;
-}* { box-sizing: border-box; }
+   flex: 1 1 50%;
+   height: calc(100vh - 240px);
+   width: auto;
+   object-fit: contain;
+   display: block;
+}
+
+/* Multi-images row: three shirts side-by-side */
+.multi-images {
+   display: flex;
+   gap: 40px;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+.multi-images img {
+   flex: 0 0 auto;
+   height: calc(100vh - 240px);
+   width: auto;
+   max-width: 33%;
+   object-fit: contain;
+   display: block;
+}
+
+* { box-sizing: border-box; }
 
 /* standard margin 0 pixels */
 * { margin: 0px; }
