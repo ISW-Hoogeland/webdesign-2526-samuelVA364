@@ -117,6 +117,20 @@ main {
    background-color: var(--color-main);
 }
 
+/* Two-column layout inside main: image left, text right */
+.main-content {
+   display: flex;
+   gap: 20px;
+   align-items: flex-start;
+}
+.main-content .text {
+   flex: 1 1 auto;
+}
+.main-content img.full-height-to-bottom {
+   flex-shrink: 0;
+   display: block;
+}
+
 footer {
    grid-area: footer;
    background-color: var(--color-footer);
