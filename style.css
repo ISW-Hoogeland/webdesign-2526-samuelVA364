@@ -125,6 +125,16 @@ footer {
 }
 
 /* ...existing code... */
+/* Utility: make images fill available height down to bottom of viewport
+   Accounts for header (120px), footer (60px) and main padding (30px top+bottom = 60px)
+   Adjust the calc if your header/footer/padding sizes change. */
+.full-height-to-bottom {
+   height: calc(100vh - 240px);
+   width: auto;
+   display: block;
+   object-fit: contain;
+}
+
 * { box-sizing: border-box; }
 
 /* standard margin 0 pixels */
