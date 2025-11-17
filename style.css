@@ -143,13 +143,25 @@ footer {
    Accounts for header (120px), footer (60px) and main padding (30px top+bottom = 60px)
    Adjust the calc if your header/footer/padding sizes change. */
 .full-height-to-bottom {
-   height: calc(100vh - 240px);
-   width: auto;
-   display: block;
-   object-fit: contain;
+  height: calc(100vh - 240px);
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
-* { box-sizing: border-box; }
+/* Two-column layout for images side-by-side */
+.two-column-images {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.two-column-images img {
+  flex: 1 1 50%;
+  height: calc(100vh - 240px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}* { box-sizing: border-box; }
 
 /* standard margin 0 pixels */
 * { margin: 0px; }
